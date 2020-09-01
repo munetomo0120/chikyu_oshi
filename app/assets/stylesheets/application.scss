@@ -2,6 +2,8 @@
 @import "box-sizing";
 @import "modules/posts_top";
 @import "modules/posts_index";
+@import "modules/posts_new";
+@import "modules/posts_edit";
 @import "modules/posts_header";
 @import "modules/posts_footer";
 @import "modules/flash";
@@ -21,7 +23,9 @@ p {
   // font-family: 'Noto Serif JP', serif;
   letter-spacing: 0.2rem;
 }
-body {
+body,
+input,
+textarea {
   line-height: 1.57;
   letter-spacing: 0.2rem;
   font-size: 16px;

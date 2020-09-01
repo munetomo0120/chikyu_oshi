@@ -1,0 +1,50 @@
+.PostsEdit {
+  .Wrapper {
+    .Main {
+      background: image-url("earth-illust.png");
+      background-repeat: no-repeat;
+      background-position: bottom 70px center;
+      background-size: 100px;
+      .Content {
+        height: calc(100vh - 90px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 72px;
+        .InputField {
+          &__name {
+            width: 480px;
+            padding: 2%;
+            margin: 2%;
+          }
+          &__country {
+            width: 480px;
+            padding: 2%;
+            margin: 2%;
+          }
+          &__description {
+            width: 480px;
+            padding: 2%;
+            margin: 2%;
+          }
+          &__latitude {
+            width: 480px;
+            padding: 2%;
+            margin: 2%;
+          }
+          &__longitude {
+            width: 480px;
+            padding: 2%;
+            margin: 2%;
+          }
+          &__submit {
+            width: 480px;
+            padding: 2%;
+            margin: 2%;
+          }
+        }
+      }
+    }
+  }
+}

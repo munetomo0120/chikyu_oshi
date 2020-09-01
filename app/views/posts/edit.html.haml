@@ -1,0 +1,42 @@
+.PostsEdit
+  .Wrapper
+    = render partial: "header"
+    .Main
+      .Content
+        .InputField
+          %table
+            %tr
+              %th
+                .Label__name
+                  名称
+              %th
+                %input(type="text" placeholder="世界遺産の名称を入力してください（必須）" class="InputField__name")/
+            %tr
+              %th
+                .Label__country
+                  国名
+              %th
+                %input(type="text" placeholder="国名を選択してください（必須）※active_hashかな" class="InputField__country")/
+            %tr
+              %th
+                .Label__description
+                  説明
+              %th
+                %textarea(name="description" cols="30" rows="5" placeholder="ここに説明文を入力してください。ピンにカーソルを合わせると説明文が表示されます（必須）" class="InputField__description")
+            %tr
+              %th
+                .Label__latitude
+                  緯度
+              %th
+                %input(type="text" placeholder="51.178958（指定しなくても登録できます）" class="InputField__latitude")/
+            %tr
+              %th
+                .Label__longitude
+                  経度
+              %th
+                %input(type="text" placeholder="-1.826552（指定しなくても登録できます）" class="InputField__longitude")/
+            %tr
+              %th
+              %th
+                %input(type="submit" value="update" class="InputField__submit")/
+    = render partial: "footer"
