@@ -1,4 +1,4 @@
-.PostsIndex {
+.PostsShow {
   .Wrapper {
     .Main {
       
@@ -30,10 +30,10 @@
           grid-template-columns: 1fr 1fr 1fr;
           margin-top: 2%;
           padding: 0 4%;
-          margin-bottom: 50px;
+          // margin-bottom: 50px;
           
         }
-         .Content {
+        .Content {
            font-size: 12px;
            
            .Description {
@@ -43,18 +43,38 @@
            &__bottom {
              height: 36px;
              .Name {
-               background-color: #666;
+              //  background-color: #666;
+               font-size: 16px;
              }
-             .Name:hover {
-               background-color: #fff;
-               -webkit-transition: 0.5s;
-               -moz-transition: 0.5s;
-               -o-transition: 0.5s;
-               -ms-transition: 0.5s;
-               transition: 0.5s;
-             }
+            //  .Name:hover {
+            //    background-color: #fff;
+            //    -webkit-transition: 0.5s;
+            //    -moz-transition: 0.5s;
+            //    -o-transition: 0.5s;
+            //    -ms-transition: 0.5s;
+            //    transition: 0.5s;
+            //  }
            }
-         }
+        }
+      }
+      .EditAndDelete {
+        padding: 0 4%;
+        margin: 2% 0;
+        display: flex;
+        .Edit {
+          margin-right: 24px;
+          .button {
+            width: 96px;
+            padding: 2%;
+          }
+        }
+        .Delete {
+          .button {
+            width: 96px;
+            padding: 2%;
+            
+          }
+        }
       }
     }
   }
