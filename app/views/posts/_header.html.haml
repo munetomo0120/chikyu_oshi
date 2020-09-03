@@ -3,19 +3,20 @@
     %li
       = link_to posts_path do
         世界遺産・建造物一覧
-    %li
-      = link_to new_post_path do
-        新規投稿する
-    %li
-      = link_to "#" do
-        ユーザー登録
-    %li
-      = link_to "#" do
-        ログイン
-    %li
-      = link_to "#" do
-        マイページ
-    %li
-      = link_to "#" do
-        ログアウト
-        
+    - if user_signed_in?
+      %li
+        = link_to new_post_path do
+          新規投稿する
+      %li
+        = link_to user_path(:id) do
+          マイページ
+      %li
+        = link_to destroy_user_session_path, method: :delete do
+          ログアウト
+    - else
+      %li
+        = link_to new_user_registration_path do
+          ユーザー登録
+      %li
+        = link_to new_user_session_path do
+          ログイン

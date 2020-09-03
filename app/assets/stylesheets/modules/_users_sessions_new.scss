@@ -1,0 +1,62 @@
+.UsersSessionsNew {
+  .Wrapper {
+    .Main {
+      background: image-url("earth-illust.png");
+      background-repeat: no-repeat;
+      background-position: bottom 70px center;
+      background-size: 100px;
+      .Content {
+        height: calc(100vh - 90px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 144px;
+        h2 {
+          font-size: 32px;
+        }
+        .field {
+          width: 320px;
+          padding: 2%;
+          .InputField {
+            width: 100%;
+            padding: 2%;
+          }
+        }
+        .actions {
+          width: 320px;
+          padding: 2%;
+          margin: 2% 0 2% 0;
+          display: flex;
+          justify-content: center;
+          .Submit {
+            width: 100%;
+            padding: 2%;
+            margin-top: 4%;
+          }
+        }
+        // a {
+        //   width: 100%;
+        //   line-height: 2;
+        //   color: #707070;
+        //   -webkit-transition: 0.5s;
+        //   -moz-transition: 0.5s;
+        //   -o-transition: 0.5s;
+        //   -ms-transition: 0.5s;
+        //   transition: 0.5s;
+        //   h2 {
+        //     font-size: 4rem;
+        //     text-align: center;
+        //   }
+        //   p {
+        //     text-align: center;
+        //   }
+        // }
+        // a:hover {
+        //   color: #101010;
+        //   font-size: larger;
+        // }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.UsersRegistrationsNew
+  .Wrapper
+    = render partial: "posts/header"
+    .Main
+      .Content
+        %h2
+          Sign up
+        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          = render "devise/shared/error_messages", resource: resource
+          .field
+            = f.label :nickname, class: "Label"
+            %br/
+            = f.text_field :nickname, autofocus: true, autocomplete: "nickname", class: "InputField"
+          .field
+            = f.label :email, class: "Label"
+            %br/
+            = f.email_field :email, autofocus: true, autocomplete: "email", class: "InputField"
+          .field
+            = f.label :password, class: "Label"
+            - if @minimum_password_length
+              %em
+                #{@minimum_password_length}文字以上の英数字
+            %br/
+            = f.password_field :password, autocomplete: "new-password", class: "InputField"
+          .field
+            = f.label :password, class: "Label"
+            %em
+              再入力してください
+            %br/
+            = f.password_field :password_confirmation, autocomplete: "new-password", class: "InputField"
+          .actions
+            = f.submit "Sign up", class: "Submit"
+          .actions
+            = link_to new_user_session_path do
+              ユーザー登録済みの方はこちら
+              
+            -# = render "devise/shared/links"
+
+= render partial: "posts/footer"
+
+
