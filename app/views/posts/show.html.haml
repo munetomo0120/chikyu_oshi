@@ -34,6 +34,25 @@
           %input(type="button" value="delete" class="button")/
 
       .Map
-        = image_tag 'google_map.png', alt: '仮の画像なので後で本物のマップになります', height: '100%', width: '100%', class: ''
+        #map{:style => "width: 100%; height: 100vh;"}
+      :javascript
+        handler = Gmaps.build('Google');
+        handler.buildMap({ 
+          // hybridはroadmapとsateliteの複合した地図
+          provider: {mapTypeId: 'hybrid'},
+          internal: {id: 'map'}
+          }, 
+          function(){
+          markers = handler.addMarkers(#{raw @hash.to_json})
+          handler.bounds.extendWith(markers);
+          // setCenterを指定しない場合、fitMapToBoundsのおかげで、該当する全てのスポットが枠に収まるように表示される。
+          // スポットが1つの場合、そこを中心にしてくれる。（setCenterを指定しない場合に限る）
+          handler.fitMapToBounds();
+          // 地図の中心の緯度経度を指定する場合に使用。
+          //handler.getMap().setCenter(new google.maps.LatLng(35.681298, 139.7640582));
+          // 数字を変えるとデフォルトの拡大率が変わる（21まで）
+          handler.getMap().setZoom(4);
+        });
+      
 
     = render partial: "footer"

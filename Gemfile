@@ -82,3 +82,6 @@ gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem "omniauth-rails_csrf_protection"
 gem 'fog-aws'
+gem 'gmaps4rails'
+gem 'geocoder'
+gem 'coffee-rails'
