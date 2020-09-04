@@ -1,6 +1,11 @@
 .UsersShow {
   .Wrapper {
     .Main {
+      background: image-url("earth-illust.png");
+      background-repeat: no-repeat;
+      background-position: bottom 70px center;
+      background-size: 100px;
+      padding-bottom: 216px;
       .Profile {
         margin-top: 12px;
         .Picture {
@@ -124,7 +129,9 @@
         // height: 600px;
         // overflow: scroll;
         .HeadLine {
-          padding: 0 4%;
+          // padding: 0 4%;
+          padding-right: calc(4% + 8px);
+          padding-left: calc(4% + 8px);
         }
         .Grid {
           display: grid;
@@ -134,20 +141,20 @@
           padding: 0 4%;
           margin-bottom: 50px;
           
-        }
-         .Content {
-           font-size: 12px;
-           
-           .Description {
-             height: 90px;
-             overflow: scroll;
-           }
-           &__bottom {
-             height: 36px;
-             .Name {
+          .Content {
+            font-size: 12px;
+            transition: all .8s ease-in-out;
+            padding: 8px;
+            .Description {
+              height: 90px;
+              overflow: scroll;
+            }
+            &__bottom {
+              height: 36px;
+              .Name {
               //  background-color: #666;
-               font-size: 16px;
-             }
+                font-size: 16px;
+              }
             //  .Name:hover {
             //    background-color: #fff;
             //    -webkit-transition: 0.5s;
@@ -156,8 +163,13 @@
             //    -ms-transition: 0.5s;
             //    transition: 0.5s;
             //  }
-           }
-         }
+            }
+          }
+          .Content:hover {
+            box-shadow: 0 0 25px rgba(0,0,0,.45);
+            background-color: antiquewhite;;
+          }
+        }
       }
     }
   }

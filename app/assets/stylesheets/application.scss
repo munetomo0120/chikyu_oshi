@@ -2,12 +2,14 @@
 @import "box-sizing";
 @import "modules/posts_top";
 @import "modules/posts_index";
+@import "modules/posts_search";
 @import "modules/posts_new";
 @import "modules/posts_edit";
 @import "modules/posts_show";
 @import "modules/posts_header";
 @import "modules/posts_footer";
 @import "modules/users_registrations_new";
+@import "modules/users_registrations_edit";
 @import "modules/users_sessions_new";
 @import "modules/users_show";
 @import "modules/flash";
@@ -15,9 +17,10 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+// 共通css
 a {
   text-decoration: none;
-  color: #707070;
+  color: #666;
 }
 h2 {
   // font-family: 'Noto Serif JP', serif;
