@@ -6,7 +6,13 @@
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    -# = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+
+    -# APIキーをここに記述して、どこでも使えるようにする
+    -# APIキーはcredentials.ymlに格納。コマンドは EDITOR="vi" bin/rails credentials:edit
+    %script{:src => "//maps.google.com/maps/api/js?key=#{Rails.application.credentials[:GOOGLE_MAP_KEY]}"}
+    %script{:src => "//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"}
     %link{:href => "https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap", :rel => "stylesheet"}/
   %body
     = yield
