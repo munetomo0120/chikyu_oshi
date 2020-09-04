@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :move_to_index, except: [:index, :show, :top]
+  before_action :move_to_index, except: [:index, :show, :top, :search]
   def top
     # ログイン済みユーザーはトップページにアクセスしてもマイページに遷移する
     if user_signed_in?
