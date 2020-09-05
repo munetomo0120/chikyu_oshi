@@ -11,17 +11,19 @@
         .Picture {
           height: 300px;
           width: 100vw;
-          // background-color: lightblue;
           position: relative;
           margin-bottom: 20px;
           &__backGround {
             height: 240px;
-            // width: 100%;
-            // background-color: lightgoldenrodyellow;
-            background: image-url("easter_island.jpg");
+            // background: image-url("easter_island.jpg");
+            background-color: antiquewhite;
             background-size: cover;
             background-position:center;
-
+            // はみ出た部分を隠す
+            overflow: hidden;
+            // 画像をセンターに
+            display: flex;
+            align-items: center;
 
           }
           &__user {
@@ -30,8 +32,8 @@
             width: 240px;
             top: 70px;
             left: 50%;
-            background: image-url("no_image.png"); //後で消す
-            background-size: cover; //後で消す
+            background: image-url("no_image.png");
+            background-size: cover;
             background-position:center ;
             border-radius: 50%;
             // はみ出た部分を隠す

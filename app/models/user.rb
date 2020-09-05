@@ -8,4 +8,5 @@ class User < ApplicationRecord
   
   has_many :posts
   mount_uploader :image, ImageUploader
+  mount_uploader :header_image, ImageUploader
 end

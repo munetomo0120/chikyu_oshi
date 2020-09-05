@@ -25,7 +25,10 @@
           .field
             = f.label "Header picture", class: "Label"
             %p -ヘッダー画像-
-            ここに入力フィールドがきます
+            = f.file_field :header_image, class: "InputField"
+            %p
+              = f.check_box :remove_header_image #画像を削除するチェックボックスremove_カラム名
+              画像を削除する
           .field
             = f.label :email, class: "Label"
             %p -メールアドレス-

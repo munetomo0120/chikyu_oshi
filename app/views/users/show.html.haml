@@ -5,6 +5,7 @@
       .Profile
         .Picture
           .Picture__backGround
+            = image_tag current_user.header_image.url , alt: 'ヘッダー画像', height: 'cover', width: '100%' if current_user.header_image?
           .Picture__user
             = image_tag current_user.image.url , alt: 'プロフィール画像', height: '240', width: '240' if current_user.image?
         .Introduction

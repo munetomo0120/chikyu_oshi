@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     # ユーザー情報登録用のカラム許可
     devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname])
     # ユーザー情報更新用のカラム許可
-    devise_parameter_sanitizer.permit(:account_update, keys: [:nickname, :image, :remove_image, :text])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:nickname, :image, :remove_image, :header_image, :remove_header_image, :text])
   end
 
   def after_sign_in_path_for(resource)
