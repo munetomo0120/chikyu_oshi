@@ -6,19 +6,20 @@
         .Picture
           .Picture__backGround
           .Picture__user
+            = image_tag current_user.image.url , alt: 'プロフィール画像', height: '240', width: '240' if current_user.image?
         .Introduction
           .Content
             .Top
               .Name
                 = "nickname: #{current_user.nickname}"
               .NumberOfPosts
-                投稿数: 8
+                = "投稿数: #{current_user.post_ids.count}" # 投稿数の取得
               .Edit
                 = link_to edit_user_registration_path do
                   編集する
             .Bottom
               .Text
-                ヤスはキリンジの片割れです。兄弟でやってた時のほうが好きでした。微妙に上ずった声と、非常に難解なコード進行が音楽通のリスナーたちの心を躍らせる日本ポップス界の宝。個人的に好きな曲はアルカディアです。
+                = current_user.text
       .Contents
         %p.HeadLine
           あなたが投稿した世界遺産一覧（説明文が長い場合はスクロールすると見れます）

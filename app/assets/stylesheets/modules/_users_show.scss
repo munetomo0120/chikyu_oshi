@@ -30,10 +30,12 @@
             width: 240px;
             top: 70px;
             left: 50%;
-            background: image-url("kirinji.jpg"); //後で消す
+            background: image-url("no_image.png"); //後で消す
             background-size: cover; //後で消す
             background-position:center ;
             border-radius: 50%;
+            // はみ出た部分を隠す
+            overflow: hidden;
             background-position: left top;
             border: 6px solid #ffffff;
             transform: translateX(-50%);

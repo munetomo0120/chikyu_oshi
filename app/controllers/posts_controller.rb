@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   def top
     # ログイン済みユーザーはトップページにアクセスしてもマイページに遷移する
     if user_signed_in?
-      redirect_to user_path(:id)
+      redirect_to user_path(current_user.id)
     end
   end
 

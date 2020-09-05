@@ -13,14 +13,15 @@
             = f.text_field :nickname, autofocus: true, autocomplete: "nickname", class: "InputField"
           .field
             = f.label "about me", class: "Label"
-            %p -あなたの自己紹介をどうぞ-
-            ここに入力フィールドがきます
-            -# = f.text_area :text, maxlength: 1000, cols: "24", rows: "3", autocomplete: "text", class: "InputField"
-            -# あとでnicknameをtextに変更
+            %p -あなたの自己紹介（255文字まで）-
+            = f.text_area :text, maxlength: 255, cols: "24", rows: "3", autocomplete: "text", class: "InputField"
           .field
             = f.label "Your picture", class: "Label"
             %p -プロフィール画像-
-            ここに入力フィールドがきます
+            = f.file_field :image, class: "InputField"
+            %p
+              = f.check_box :remove_image #画像を削除するチェックボックスremove_カラム名
+              画像を削除する
           .field
             = f.label "Header picture", class: "Label"
             %p -ヘッダー画像-

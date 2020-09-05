@@ -5,10 +5,10 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    # ユーザー情報登録用
+    # ユーザー情報登録用のカラム許可
     devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname])
-    # ユーザー情報更新用
-    devise_parameter_sanitizer.permit(:account_update, keys: [:nickname])
+    # ユーザー情報更新用のカラム許可
+    devise_parameter_sanitizer.permit(:account_update, keys: [:nickname, :image, :remove_image, :text])
   end
 
   def after_sign_in_path_for(resource)
