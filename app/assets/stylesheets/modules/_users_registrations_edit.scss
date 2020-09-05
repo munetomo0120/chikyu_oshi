@@ -24,6 +24,11 @@
         .field {
           width: 320px;
           padding: 2%;
+          .thumb {
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5);
+            margin: 2%;
+            padding: 1%;
+          }
           .InputField {
             width: 100%;
             padding: 2%;

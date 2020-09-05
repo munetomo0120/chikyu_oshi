@@ -18,6 +18,10 @@
           .field
             = f.label "Your picture", class: "Label"
             %p -プロフィール画像-
+            - if current_user.image?
+              = image_tag current_user.image.url(:thumb), class: "thumb"
+            -# - else
+            -#   = image_tag("no_image.png", height: "50", width: "50", class: "thumb")
             = f.file_field :image, class: "InputField"
             %p
               = f.check_box :remove_image #画像を削除するチェックボックスremove_カラム名
@@ -25,6 +29,10 @@
           .field
             = f.label "Header picture", class: "Label"
             %p -ヘッダー画像-
+            - if current_user.header_image?
+              = image_tag current_user.header_image.url(:thumb), class: "thumb"
+            -# - else
+            -#   = image_tag("no_image.png", height: "50", width: "50", class: "thumb")
             = f.file_field :header_image, class: "InputField"
             %p
               = f.check_box :remove_header_image #画像を削除するチェックボックスremove_カラム名
