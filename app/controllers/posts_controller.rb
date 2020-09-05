@@ -70,6 +70,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def search
+    @search_posts = Post.search(params[:key])
+  end
+
   private
 
   def move_to_index
