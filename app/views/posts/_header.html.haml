@@ -8,7 +8,7 @@
         = link_to new_post_path do
           新規投稿する
       %li
-        = link_to user_path(:id) do
+        = link_to user_path(current_user.id) do
           マイページ
       %li
         = link_to destroy_user_session_path, method: :delete do

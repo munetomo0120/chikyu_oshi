@@ -18,20 +18,22 @@
           .Content
             .Content__bottom
               .Name
-                ストーンヘンジ
+                = @post.name
             .Country
-              国名: イギリス
+              = "国名: #{@post.country}"
             .Latitude
-              緯度: 51.178958
+              = "緯度: #{@post.latitude}"
             .Longitude
-              経度: -1.826552
+              = "経度: #{@post.longitude}"
             .Description
-              ロンドンから西に約200kmのイギリス南部・ソールズベリーから北西に13km程に位置する環状列石（ストーンサークル）のこと。世界文化遺産として1986年に登録された。2008年には範囲を変更して登録された。ロンドンから西に約200kmのイギリス南部・ソールズベリーから北西に13km程に位置する環状列石（ストーンサークル）のこと。世界文化遺産として1986年に登録された。2008年には範囲を変更して登録された。
+              = @post.description
       .EditAndDelete
         .Edit
-          %input(type="button" value="edit" class="button")/
+          = link_to "edit", edit_post_path(@post.id), class: "button"
         .Delete
-          %input(type="button" value="delete" class="button")/
+          = link_to "delete", post_path(@post.id), method: :delete, class: "button", data: {confirm: "Are you sure to delete the post?"}
+
+          -# %input(type="button" value="delete" class="button")/
 
       .Map
         #map{:style => "width: 100%; height: 100vh;"}

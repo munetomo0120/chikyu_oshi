@@ -6,5 +6,6 @@ class User < ApplicationRecord
 
   validates :nickname, presence: true, uniqueness: { case_sensitive: true }
   
+  has_many :posts
   
 end

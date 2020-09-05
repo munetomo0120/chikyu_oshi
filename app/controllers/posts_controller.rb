@@ -54,10 +54,11 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to posts_path
+    # respond_to do |format|
+    #   format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+    #   format.json { head :no_content }
+    # end
   end
   
   def show
@@ -78,7 +79,7 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:name, :description, :country, :latitude, :longitude)
+    params.require(:post).permit(:name, :description, :country, :latitude, :longitude).merge(user_id: current_user.id)
   end
   
   def set_post
