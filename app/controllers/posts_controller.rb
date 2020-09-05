@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all
+    @posts = Post.order(created_at: :DESC)
     # マーカーを立てるための記述
     @hash = Gmaps4rails.build_markers(@posts) do |post, marker|
       marker.lat post.latitude
