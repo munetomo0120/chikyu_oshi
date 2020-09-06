@@ -4,39 +4,58 @@
     .Main
       .Content
         .InputField
-          %table
-            %tr
-              %th
-                .Label__name
-                  名称
-              %th
-                %input(type="text" placeholder="世界遺産の名称を入力してください（必須）" class="InputField__name")/
-            %tr
-              %th
-                .Label__country
-                  国名
-              %th
-                %input(type="text" placeholder="国名を選択してください（必須）※active_hashかな" class="InputField__country")/
-            %tr
-              %th
-                .Label__description
-                  説明
-              %th
-                %textarea(name="description" cols="30" rows="5" placeholder="ここに説明文を入力してください。ピンにカーソルを合わせると説明文が表示されます（必須）" class="InputField__description")
-            %tr
-              %th
-                .Label__latitude
-                  緯度
-              %th
-                %input(type="text" placeholder="51.178958（指定しなくても登録できます）" class="InputField__latitude")/
-            %tr
-              %th
-                .Label__longitude
-                  経度
-              %th
-                %input(type="text" placeholder="-1.826552（指定しなくても登録できます）" class="InputField__longitude")/
-            %tr
-              %th
-              %th
-                %input(type="submit" value="send" class="InputField__submit")/
+          = form_with model: @post, local: true do |f|
+            .field
+              = f.label "名称（必須）", class: "Label"
+              = f.text_field :name, placeholder: "世界遺産の名称を入力してください", class: "InputField__name"
+            .field
+              = f.label "国名（必須）", class: "Label"
+              = f.text_field :country, placeholder: "国名を選択してください※active_hashかな", class: "InputField__country"
+            .field
+              = f.label "説明文（必須）", class: "Label"
+              = f.text_area :description, maxlength: 255, cols: "30", rows: "5", placeholder: "ここに説明文を入力してください。文章を引用した場合は引用元を明記してください。", class: "InputField__description"
+            -# .field
+            -#   = f.label "緯度", class: "Label"
+            -#   = f.text_field :latitude, placeholder: "※指定しなくても登録できます", class: "InputField__latitude"
+            -# .field
+            -#   = f.label "経度", class: "Label"
+            -#   = f.text_field :longitude, placeholder: "※指定しなくても登録できます", class: "InputField__longitude"
+            .actions
+              = f.submit "send", class: "InputField__submit"
+
+          -# %table
+          -#   %tr
+          -#     %th
+          -#       .Label__name
+          -#         名称
+          -#     %th
+          -#       %input(type="text" placeholder="世界遺産の名称を入力してください（必須）" class="InputField__name")/
+          -#   %tr
+          -#     %th
+          -#       .Label__country
+          -#         国名
+          -#     %th
+          -#       %input(type="text" placeholder="国名を選択してください（必須）※active_hashかな" class="InputField__country")/
+          -#   %tr
+          -#     %th
+          -#       .Label__description
+          -#         説明
+          -#     %th
+          -#       %textarea(name="description" cols="30" rows="5" placeholder="ここに説明文を入力してください。ピンにカーソルを合わせると説明文が表示されます（必須）" class="InputField__description")
+          -#   %tr
+          -#     %th
+          -#       .Label__latitude
+          -#         緯度
+          -#     %th
+          -#       %input(type="text" placeholder="51.178958（指定しなくても登録できます）" class="InputField__latitude")/
+          -#   %tr
+          -#     %th
+          -#       .Label__longitude
+          -#         経度
+          -#     %th
+          -#       %input(type="text" placeholder="-1.826552（指定しなくても登録できます）" class="InputField__longitude")/
+          -#   %tr
+          -#     %th
+          -#     %th
+          -#       %input(type="submit" value="send" class="InputField__submit")/
     = render partial: "footer"

@@ -6,5 +6,7 @@ class User < ApplicationRecord
 
   validates :nickname, presence: true, uniqueness: { case_sensitive: true }
   
-  
+  has_many :posts
+  mount_uploader :image, ImageUploader
+  mount_uploader :header_image, ImageUploader
 end

@@ -4,12 +4,12 @@ class PostsController < ApplicationController
   def top
     # ログイン済みユーザーはトップページにアクセスしてもマイページに遷移する
     if user_signed_in?
-      redirect_to user_path(:id)
+      redirect_to user_path(current_user.id)
     end
   end
 
   def index
-    @posts = Post.all
+    @posts = Post.order(created_at: :DESC)
     # マーカーを立てるための記述
     @hash = Gmaps4rails.build_markers(@posts) do |post, marker|
       marker.lat post.latitude
@@ -54,10 +54,11 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to posts_path
+    # respond_to do |format|
+    #   format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+    #   format.json { head :no_content }
+    # end
   end
   
   def show
@@ -69,6 +70,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def search
+    @search_posts = Post.search(params[:key])
+  end
+
   private
 
   def move_to_index
@@ -78,7 +83,7 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:name, :description, :country, :latitude, :longitude)
+    params.require(:post).permit(:name, :description, :country, :latitude, :longitude).merge(user_id: current_user.id)
   end
   
   def set_post

@@ -5,7 +5,8 @@
       background-repeat: no-repeat;
       background-position: bottom 70px center;
       background-size: 100px;
-      padding-bottom: 216px;
+      padding-bottom: 144px;
+      margin-top: 48px;
       .Content {
         height: calc(100vh - 90px);
         display: flex;
@@ -14,6 +15,14 @@
         align-items: center;
         padding-bottom: 72px;
         .InputField {
+          .field {
+            width: 500px;
+          }
+          .Label {
+            padding: 0 2%;
+            margin: 0 2%;
+            display: flex;
+          }
           &__name {
             width: 480px;
             padding: 2%;
