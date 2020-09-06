@@ -14,17 +14,17 @@
       -#   = image_tag 'google_map.png', alt: '仮の画像なので後で本物のマップになります', height: '100%', width: '100%', class: ''
       .Contents
         %p.HeadLine
-          検索結果一覧（クリックすると詳細が表示されます）
-        .Contents.Grid
+          検索結果一覧（カードをクリックすると詳細が表示されます）
+        .Grid
           -# eachメソッドで投稿を一覧表示
           - @search_posts.each do |post|
-            .Content
+            .Content.FadeIn
               = link_to post_path(post.id) do
                 .Content__bottom
                   .Name
                     = post.name
                 .Country
-                  = "国名: #{post.country}"
+                  = "国名: #{post.country.country}"
                 .Latitude
                   = "緯度: #{post.latitude}"
                 .Longitude

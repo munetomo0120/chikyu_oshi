@@ -2,6 +2,12 @@
   .Wrapper
     = render partial: "header"
     .Main
+      %h2
+        世界遺産・建造物一覧
+      %p
+        地図上のピンをクリックすると中心に移動します。
+      %p
+        右下の＋ボタンでズームアップして地球押しの練習をしましょう。
       .Search
         = form_with(url: search_posts_path, local: true, method: :get, class: "SearchForm") do |f|
           .SearchBox
@@ -28,14 +34,16 @@
 
       .Contents
         %p.HeadLine
-          世界遺産一覧（アンダーラインにカーソルを合わせると名称が表示されます）
-        .Contents.Grid
+          世界遺産・建造物一覧（アンダーラインにカーソルを合わせると名称が表示されます）
+        %p
+          それぞれのカードをクリックすると詳細が表示されます
+        .Grid
           -# eachメソッドで投稿を一覧表示
           - @posts.each do |post|
             .Content
               = link_to post_path(post.id) do
                 .Country
-                  = "国名: #{post.country}"
+                  = "国名: #{post.country.country}"
                 .Latitude
                   = "緯度: #{post.latitude}"
                 .Longitude

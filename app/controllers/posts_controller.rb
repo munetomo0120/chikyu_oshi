@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.order(created_at: :DESC)
+    @posts = Post.includes(:user).order(created_at: :DESC)
     # マーカーを立てるための記述
     @hash = Gmaps4rails.build_markers(@posts) do |post, marker|
       marker.lat post.latitude
@@ -62,7 +62,7 @@ class PostsController < ApplicationController
   end
   
   def show
-    @posts = Post.all
+    # @posts = Post.all
     @hash = Gmaps4rails.build_markers(@post) do |post, marker|
       marker.lat post.latitude
       marker.lng post.longitude
@@ -83,7 +83,7 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:name, :description, :country, :latitude, :longitude).merge(user_id: current_user.id)
+    params.require(:post).permit(:name, :description, :country_id, :latitude, :longitude).merge(user_id: current_user.id)
   end
   
   def set_post

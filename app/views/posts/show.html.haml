@@ -19,8 +19,10 @@
             .Content__bottom
               .Name
                 = @post.name
+            -# .Country
+            -#   = "国名: #{@post.country}"
             .Country
-              = "国名: #{@post.country}"
+              = "国名: #{@post.country.country}"
             .Latitude
               = "緯度: #{@post.latitude}"
             .Longitude
