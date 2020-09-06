@@ -15,9 +15,10 @@
                 = "nickname: #{current_user.nickname}"
               .NumberOfPosts
                 = "投稿数: #{current_user.post_ids.count}" # 投稿数の取得
-              .Edit
-                = link_to edit_user_registration_path do
-                  編集する
+              - if user_signed_in? && current_user
+                .Edit
+                  = link_to edit_user_registration_path do
+                    編集する
             .Bottom
               .Text
                 = current_user.text
