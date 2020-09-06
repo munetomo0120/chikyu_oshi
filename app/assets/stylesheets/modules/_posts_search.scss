@@ -42,12 +42,10 @@
           
         }
         .Content {
-          margin: 15px;
-          float: left;
-          visibility: hidden;
+
 
           font-size: 12px;
-          // transition: all .2s ease-in-out;
+          // transition: all .8s ease-in-out;
           padding: 8px;
           // animation-name: fadein;
           // animation-duration: 1s;
@@ -61,6 +59,9 @@
               font-size: 16px;
             }
           }
+        }
+        .FadeIn {
+          visibility: hidden;
         }
         // @keyframes fadein {
         //   from {
