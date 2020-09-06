@@ -6,18 +6,27 @@
       background-position: bottom 70px center;
       background-size: 100px;
       .Content {
-        height: calc(100vh - 90px);
+        // height: calc(100vh - 90px);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-bottom: 144px;
+        padding-bottom: 216px;
+        .new_user {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
         h2 {
           font-size: 32px;
         }
         .field {
           width: 320px;
-          padding: 2%;
+          padding: 8px;
+          br {
+            display: none;
+          }
           .InputField {
             width: 100%;
             padding: 2%;
@@ -25,8 +34,8 @@
         }
         .actions {
           width: 320px;
-          padding: 2%;
-          margin: 2% 0 2% 0;
+          padding: 8px;
+          margin: 8px 0;
           display: flex;
           justify-content: center;
           .Submit {
@@ -58,5 +67,11 @@
         // }
       }
     }
+  }
+  p {
+    font-size: 12px;
+  }
+  em {
+    font-size: 12px;
   }
 }

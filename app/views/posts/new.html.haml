@@ -5,6 +5,7 @@
       .Content
         .InputField
           = form_with model: @post, local: true do |f|
+            = render 'layouts/error_messages', model: f.object
             .field
               = f.label "名称（必須）", class: "Label"
               = f.text_field :name, placeholder: "世界遺産の名称を入力してください", class: "InputField__name"

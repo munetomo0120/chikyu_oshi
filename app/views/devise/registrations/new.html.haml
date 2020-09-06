@@ -18,13 +18,13 @@
           .field
             = f.label :password, class: "Label"
             - if @minimum_password_length
-              %em
+              %p
                 #{@minimum_password_length}文字以上の英数字
             %br/
             = f.password_field :password, autocomplete: "new-password", class: "InputField"
           .field
             = f.label :password, class: "Label"
-            %em
+            %p
               再入力してください
             %br/
             = f.password_field :password_confirmation, autocomplete: "new-password", class: "InputField"

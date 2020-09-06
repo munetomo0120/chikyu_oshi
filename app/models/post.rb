@@ -3,6 +3,11 @@ class Post < ApplicationRecord
   geocoded_by :name
   after_validation :geocode
 
+  validates :name, presence: true, uniqueness: true
+  validates :description, presence: true
+  
+  
+
   belongs_to :user
 
   # 複数カラムであいまい検索できる
