@@ -14,7 +14,9 @@
               = f.text_field :country, placeholder: "国名を選択してください※active_hashかな", class: "InputField__country"
             .field
               = f.label "説明文（必須）", class: "Label"
-              = f.text_area :description, maxlength: 255, cols: "30", rows: "5", placeholder: "ここに説明文を入力してください。文章を引用した場合は引用元を明記してください。", class: "InputField__description"
+              = f.text_area :description, maxlength: 255, cols: "30", rows: "5", placeholder: "ここに説明文を入力してください。文章を引用した場合は引用元を明記してください。", class: "InputField__description ExplanationField"
+              %p.Counter
+                %span.NowCnt
             .field
               = f.label "緯度", class: "Label"
               = f.text_field :latitude, placeholder: "※指定しなくても登録できます", class: "InputField__latitude"

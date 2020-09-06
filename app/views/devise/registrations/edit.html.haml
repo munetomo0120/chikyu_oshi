@@ -14,7 +14,9 @@
           .field
             = f.label "about me", class: "Label"
             %p -あなたの自己紹介（255文字まで）-
-            = f.text_area :text, maxlength: 255, cols: "24", rows: "3", autocomplete: "text", class: "InputField"
+            = f.text_area :text, maxlength: 255, cols: "24", rows: "3", autocomplete: "text", class: "InputField ExplanationField"
+            %p.Counter
+              %span.NowCnt
           .field
             = f.label "Your picture", class: "Label"
             %p -プロフィール画像-

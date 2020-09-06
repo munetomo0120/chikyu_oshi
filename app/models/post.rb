@@ -4,7 +4,7 @@ class Post < ApplicationRecord
   after_validation :geocode
 
   validates :name, presence: true, uniqueness: true
-  validates :description, presence: true
+  validates :description, presence: true, length: { maximum: 255 }
   
   
 

@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :nickname, presence: true, uniqueness: { case_sensitive: true }
+  validates :text, length: { maximum: 255 }
   
   has_many :posts
   mount_uploader :image, ImageUploader
