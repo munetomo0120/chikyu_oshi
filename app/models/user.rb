@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :nickname, presence: true, uniqueness: { case_sensitive: true }
   validates :text, length: { maximum: 255 }
   
-  has_many :posts
+  has_many :posts, dependent: :destroy
   # いいね用
   has_many :likes, dependent: :destroy
   has_many :like_posts, through: :likes, source: :post
