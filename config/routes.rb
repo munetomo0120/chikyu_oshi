@@ -19,5 +19,9 @@ Rails.application.routes.draw do
   get 'posts/top', to: 'posts#top'
   
   # usersコントローラ
-  resources :users, only: :show
+  resources :users, only: [:index, :show] do
+    collection do
+      get :likes
+    end
+  end
 end
