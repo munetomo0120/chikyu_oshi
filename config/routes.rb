@@ -7,6 +7,11 @@ Rails.application.routes.draw do
       # searchアクションへのパス
       get 'search'
     end
+    member do
+      post   '/like/:post_id' => 'likes#like',   as: 'like'
+      delete '/like/:post_id' => 'likes#unlike', as: 'unlike'
+    end
+  
   end
   # ルートパス
   root 'posts#top'
@@ -14,5 +19,9 @@ Rails.application.routes.draw do
   get 'posts/top', to: 'posts#top'
   
   # usersコントローラ
-  resources :users, only: :show
+  resources :users, only: [:index, :show] do
+    collection do
+      get :likes
+    end
+  end
 end

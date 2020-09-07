@@ -19,21 +19,26 @@
             .Content__bottom
               .Name
                 = @post.name
+            -# .Country
+            -#   = "国名: #{@post.country}"
+            .option
+              = render partial: 'likes/like', locals: { post: @post }
+
             .Country
-              = "国名: #{@post.country}"
+              = "国名: #{@post.country.country}"
             .Latitude
               = "緯度: #{@post.latitude}"
             .Longitude
               = "経度: #{@post.longitude}"
             .Description
               = @post.description
-      .EditAndDelete
-        .Edit
-          = link_to "edit", edit_post_path(@post.id), class: "button"
-        .Delete
-          = link_to "delete", post_path(@post.id), method: :delete, class: "button", data: {confirm: "Are you sure to delete the post?"}
+      - if user_signed_in? && current_user.id == @post.user_id
+        .EditAndDelete
+          .Edit
+            = link_to "edit", edit_post_path(@post.id), class: "button"
+          .Delete
+            = link_to "delete", post_path(@post.id), method: :delete, class: "button", data: {confirm: "Are you sure to delete the post?"}
 
-          -# %input(type="button" value="delete" class="button")/
 
       .Map
         #map{:style => "width: 100%; height: 100vh;"}

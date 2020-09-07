@@ -12,6 +12,7 @@
 @import "modules/users_registrations_edit";
 @import "modules/users_sessions_new";
 @import "modules/users_show";
+@import "modules/users_likes";
 @import "modules/flash";
 @import "modules/error_messages";
 @import "font-awesome-sprockets";
@@ -32,6 +33,7 @@ p {
 }
 body,
 input,
+select,
 textarea {
   line-height: 1.57;
   letter-spacing: 0.2rem;
@@ -39,4 +41,12 @@ textarea {
   color: #666;
   font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
   margin: 0;
+}
+#error_explanation {
+  font-size: 12px;
+  color: crimson;
+  h2 {
+    font-size: 12px;
+    padding-bottom: 8px;
+  }
 }

@@ -1,4 +1,4 @@
-.UsersShow
+.UsersLikes
   .Wrapper
     = render partial: "posts/header"
     .Main
@@ -24,12 +24,12 @@
                 = current_user.text
       .Contents
         %p.HeadLine
-          あなたが投稿した世界遺産一覧（説明文が長い場合はスクロールすると見れます）
+          わかった！をした世界遺産一覧
         %p.HeadLine.Link
-          = link_to "わかった！をした世界遺産一覧はこちら", likes_users_path
+          = link_to "back", user_path(current_user.id)
           
         .Content.Grid
-          - @posts.each do |post|
+          - current_user.like_posts.each do |post|
             .Content
               = link_to post_path(post.id) do
                 .Content__bottom
