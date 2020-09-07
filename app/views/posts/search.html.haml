@@ -22,13 +22,13 @@
               = link_to post_path(post.id) do
                 .Content__bottom
                   .Name
-                    = post.name
+                    = post.name.truncate(18)
                 .Country
                   = "国名: #{post.country.country}"
                 .Latitude
                   = "緯度: #{post.latitude}"
                 .Longitude
-                  = "経度: #{post.latitude}"
+                  = "経度: #{post.longitude}"
                 .Description
                   = post.description
 

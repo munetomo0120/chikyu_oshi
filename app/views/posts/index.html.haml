@@ -34,7 +34,7 @@
 
       .Contents
         %p.HeadLine
-          世界遺産・建造物一覧（アンダーラインにカーソルを合わせると名称が表示されます）
+          世界遺産・建造物一覧（新しく登録された順に表示しています）
         %p
           それぞれのカードをクリックすると詳細が表示されます
         .Grid
@@ -42,6 +42,9 @@
           - @posts.each do |post|
             .Content
               = link_to post_path(post.id) do
+                .Content__bottom
+                  .Name
+                    = post.name.truncate(18)
                 .Country
                   = "国名: #{post.country.country}"
                 .Latitude
@@ -50,8 +53,5 @@
                   = "経度: #{post.longitude}"
                 .Description
                   = post.description
-                .Content__bottom
-                  .Name
-                    = post.name
 
     = render partial: "footer"

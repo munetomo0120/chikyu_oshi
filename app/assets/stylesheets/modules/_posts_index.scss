@@ -58,8 +58,10 @@
           &__bottom {
             height: 36px;
             .Name {
-              background-color: #666;
-              transition: all .8s ease-in-out;
+              // background-color: #666;
+              // transition: all .8s ease-in-out;
+              font-size: 16px;
+              border-bottom: 1px solid #666;
             }
             .Name:hover {
               background-color: antiquewhite;
