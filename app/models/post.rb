@@ -8,6 +8,9 @@ class Post < ApplicationRecord
   validates :description, presence: true, length: { maximum: 255 }
   
   belongs_to :user
+  # いいね用
+  has_many :likes, dependent: :destroy
+  has_many :liking_users, through: :likes, source: :user
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :country

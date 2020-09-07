@@ -7,6 +7,11 @@ Rails.application.routes.draw do
       # searchアクションへのパス
       get 'search'
     end
+    member do
+      post   '/like/:post_id' => 'likes#like',   as: 'like'
+      delete '/like/:post_id' => 'likes#unlike', as: 'unlike'
+    end
+  
   end
   # ルートパス
   root 'posts#top'

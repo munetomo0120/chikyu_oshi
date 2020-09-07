@@ -158,6 +158,7 @@
               .Name {
               //  background-color: #666;
                 font-size: 16px;
+                border-bottom: 1px solid #666;
               }
             //  .Name:hover {
             //    background-color: #fff;
@@ -167,6 +168,9 @@
             //    -ms-transition: 0.5s;
             //    transition: 0.5s;
             //  }
+            }
+            .Like {
+              padding-bottom: 8px;
             }
           }
           .Content:hover {

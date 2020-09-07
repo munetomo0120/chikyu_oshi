@@ -32,6 +32,9 @@
                 .Content__bottom
                   .Name
                     = post.name
+                .Like
+                  .fas.fa-globe-americas
+                  = "わかった！: #{post.likes.count}"
                 .Country
                   = "国名: #{post.country.country}"
                 .Latitude

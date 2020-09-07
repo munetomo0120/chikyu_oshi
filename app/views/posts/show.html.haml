@@ -21,6 +21,9 @@
                 = @post.name
             -# .Country
             -#   = "国名: #{@post.country}"
+            .option
+              = render partial: 'likes/like', locals: { post: @post }
+
             .Country
               = "国名: #{@post.country.country}"
             .Latitude
