@@ -13,13 +13,7 @@ User.create!(
       email: 'kanri@kanri.com',
       password: 'kanri1234',
       id: 1
-    },
-    {
-      nickname: 'テストユーザー',
-      email: 'test@test.com',
-      password: 'test1234',
-      id: 2
-    },
+    }
   ]
 )
 

@@ -12,7 +12,7 @@
     li {
       margin-left: 36px;
       letter-spacing: 0.2rem;
-      a {
+      a, .Guest{
         color: #707070;
         -webkit-transition: 0.5s;
         -moz-transition: 0.5s;
@@ -39,6 +39,24 @@
       }
       a:hover:before {
         transform: scale(1);
+      }
+      .Guest {
+        color: crimson;
+      }
+      .Guest:hover {
+        color: crimson;
+      }
+      .Guest:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 100%;
+        height: 1px;
+        background: crimson;
+        transform: scale(0, 1);
+        transform-origin: left;
+        transition: 0.5s;
       }
     }
   }
