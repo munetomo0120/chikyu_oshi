@@ -3,7 +3,7 @@ class Post < ApplicationRecord
   geocoded_by :name
   after_validation :geocode
 
-  validates :name, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: { case_sensitive: true }
   validates :country_id, presence: true
   validates :description, presence: true, length: { maximum: 255 }
   
