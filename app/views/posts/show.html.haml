@@ -2,13 +2,14 @@
   .Wrapper
     = render partial: "header"
     .Main
-      .Search
-        = form_with(url: search_posts_path, local: true, method: :get, class: "SearchForm") do |f|
-          .SearchBox
-            = f.label "SEARCH", class: "Label"
-            = f.text_field :key, placeholder: "キーワードから探す", class: "search", id: "searchInput"
-          .SearchButton
-            %input(type="submit" value="push" class="button")/
+      = render partial: "search_form"
+      -# .Search
+      -#   = form_with(url: search_posts_path, local: true, method: :get, class: "SearchForm") do |f|
+      -#     .SearchBox
+      -#       = f.label "SEARCH", class: "Label"
+      -#       = f.text_field :key, placeholder: "キーワードから探す", class: "search", id: "searchInput"
+      -#     .SearchButton
+      -#       %input(type="submit" value="push" class="button")/
 
       .Contents
         %p.HeadLine

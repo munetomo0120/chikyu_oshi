@@ -1,0 +1,16 @@
+.Content
+  = link_to post_path(post.id) do
+    .Content__bottom
+      .Name
+        = post.name.truncate(18)
+    .Like
+      .fas.fa-globe-americas
+      = "わかった！: #{post.likes.count}"
+    .Country
+      = "国名: #{post.country.country}"
+    .Latitude
+      = "緯度: #{post.latitude}"
+    .Longitude
+      = "経度: #{post.longitude}"
+    .Description
+      = post.description

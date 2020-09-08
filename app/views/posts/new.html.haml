@@ -2,7 +2,7 @@
   .Wrapper
     = render partial: "header"
     .Main
-      .Content
+      .Main__content
         .InputField
           = form_with model: @post, local: true do |f|
             = render 'layouts/error_messages', model: f.object

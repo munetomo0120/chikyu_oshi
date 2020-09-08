@@ -2,50 +2,15 @@
   .Wrapper
     = render partial: "posts/header"
     .Main
-      .Profile
-        .Picture
-          .Picture__backGround
-            = image_tag current_user.header_image.url , alt: 'ヘッダー画像', height: 'cover', width: '100%' if current_user.header_image?
-          .Picture__user
-            = image_tag current_user.image.url , alt: 'プロフィール画像', height: '240', width: '240' if current_user.image?
-        .Introduction
-          .Content
-            .Top
-              .Name
-                = "nickname: #{current_user.nickname}"
-              .NumberOfPosts
-                = "投稿数: #{current_user.post_ids.count}" # 投稿数の取得
-              - if user_signed_in? && current_user
-                .Edit
-                  = link_to edit_user_registration_path do
-                    編集する
-            .Bottom
-              .Text
-                = current_user.text
+      = render partial: "profile"
       .Contents
         %p.HeadLine
           わかった！をした世界遺産一覧
         %p.HeadLine.Link
           = link_to "back", user_path(current_user.id)
           
-        .Content.Grid
+        .Grid
           - current_user.like_posts.each do |post|
-            .Content
-              = link_to post_path(post.id) do
-                .Content__bottom
-                  .Name
-                    = post.name
-                .Like
-                  .fas.fa-globe-americas
-                  = "わかった！: #{post.likes.count}"
-                .Country
-                  = "国名: #{post.country.country}"
-                .Latitude
-                  = "緯度: #{post.latitude}"
-                .Longitude
-                  = "経度: #{post.longitude}"
-                .Description
-                  = post.description
-
+            = render partial: "posts/post", locals: { post: post }
 
     = render partial: "posts/footer"

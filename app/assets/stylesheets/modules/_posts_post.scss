@@ -1,0 +1,28 @@
+.Content {
+  font-size: 12px;
+  // transition: all .8s ease-in-out;
+  padding: 8px 8px 0 8px;
+  .Description {
+    height: 90px;
+    overflow: scroll;
+  }
+  &__bottom {
+    height: 36px;
+    .Name {
+      // background-color: #666;
+      // transition: all .8s ease-in-out;
+      font-size: 16px;
+      border-bottom: 1px solid #666;
+    }
+    .Name:hover {
+      background-color: antiquewhite;
+    }
+  }
+  .Like {
+    padding-bottom: 8px;
+  }
+}
+.Content:hover {
+  box-shadow: 0 0 25px rgba(0,0,0,.45);
+  background-color: antiquewhite;
+}
