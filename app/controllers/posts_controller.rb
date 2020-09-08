@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
+  # テスト時コメントアウト
   # before_action :move_to_index, except: [:index, :top, :search, :show]
+  
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   def top
     # ログイン済みユーザーはトップページにアクセスしてもマイページに遷移する
