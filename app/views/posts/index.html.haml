@@ -8,13 +8,7 @@
         地図上のピンをクリックすると中心に移動します。
       %p
         右下の＋ボタンでズームアップして地球押しの練習をしましょう。
-      .Search
-        = form_with(url: search_posts_path, local: true, method: :get, class: "SearchForm") do |f|
-          .SearchBox
-            = f.label "SEARCH", class: "Label"
-            = f.text_field :key, placeholder: "キーワードから探す", class: "search", id: "searchInput"
-          .SearchButton
-            %input(type="submit" value="push" class="button")/
+      = render partial: "search_form"
 
       .Map
         #map{:style => "width: 100%; height: 100vh;"}
@@ -40,21 +34,6 @@
         .Grid
           -# eachメソッドで投稿を一覧表示
           - @posts.each do |post|
-            .Content
-              = link_to post_path(post.id) do
-                .Content__bottom
-                  .Name
-                    = post.name.truncate(18)
-                .Like
-                  .fas.fa-globe-americas
-                  = "わかった！: #{post.likes.count}"
-                .Country
-                  = "国名: #{post.country.country}"
-                .Latitude
-                  = "緯度: #{post.latitude}"
-                .Longitude
-                  = "経度: #{post.longitude}"
-                .Description
-                  = post.description
+            = render partial: "post", locals: { post: post }
 
     = render partial: "footer"
