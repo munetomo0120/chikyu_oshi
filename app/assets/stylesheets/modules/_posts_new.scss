@@ -65,3 +65,77 @@
     padding-right: 2%;
   }
 }
+@media screen and(max-width: 414px) {
+  .PostsNew {
+    .Wrapper {
+      .Main {
+        background: image-url("earth-illust.png");
+        background-repeat: no-repeat;
+        background-position: bottom 70px center;
+        background-size: 100px;
+        padding-bottom: 216px;
+        &__content {
+          // height: calc(100vh - 90px);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          // padding-bottom: 144px;
+          // padding-top: 72px;
+          padding: 4%;
+          .InputField {
+            .field {
+              width: 96%;
+            }
+            .Label {
+              padding: 0 2%;
+              margin: 0 2%;
+              display: flex;
+            }
+            .actions {
+              width: 96%;
+            }
+            &__name {
+              width: 100%;
+              padding: 2%;
+              margin: 2%;
+            }
+            &__country {
+              width: 100%;
+              padding: 2%;
+              margin: 2%;
+            }
+            &__description {
+              width: 100%;
+              padding: 2%;
+              margin: 2%;
+            }
+            &__latitude {
+              width: 100%;
+              padding: 2%;
+              margin: 2%;
+            }
+            &__longitude {
+              width: 100%;
+              padding: 2%;
+              margin: 2%;
+            }
+            &__submit {
+              width: 100%;
+              padding: 2%;
+              margin: 2%;
+            }
+          }
+        }
+      }
+    }
+    .Counter {
+      color: #888;
+      font-size: 12px;
+      line-height: 1.4em;
+      text-align: right;
+      padding-right: 2%;
+    }
+  }
+  
+}
