@@ -100,3 +100,108 @@
     }
   }
 }
+@media screen and(max-width: 414px) {
+  .Profile {
+  margin-top: 12px;
+  .Picture {
+    height: 300px;
+    width: 100vw;
+    position: relative;
+    margin-bottom: 20px;
+    &__backGround {
+      height: 240px;
+      // background: image-url("easter_island.jpg");
+      background-color: antiquewhite;
+      background-size: cover;
+      background-position:center;
+      // はみ出た部分を隠す
+      overflow: hidden;
+      // 画像をセンターに
+      display: flex;
+      align-items: center;
+
+    }
+    &__user {
+      position: absolute;
+      height: 240px;
+      width: 240px;
+      top: 70px;
+      left: 50%;
+      background: image-url("no_image.png");
+      background-size: cover;
+      background-position:center ;
+      border-radius: 50%;
+      // はみ出た部分を隠す
+      overflow: hidden;
+      background-position: left top;
+      border: 6px solid #ffffff;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+    }
+  }
+  .Introduction {
+    padding: 0 4%;
+    margin-bottom: 72px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    &__content {
+      width: 100%;
+      .Top {
+        .Name {
+          width: 100%;
+          text-align: center;
+        }
+        .NumberOfPosts {
+          width: 100%;
+          text-align: center;
+        }
+        .Edit {
+          width: 100%;
+          text-align: center;
+          margin-top: 16px;
+          a {
+            color: #707070;
+            -webkit-transition: 0.5s;
+            -moz-transition: 0.5s;
+            -o-transition: 0.5s;
+            -ms-transition: 0.5s;
+            transition: 0.5s;
+            position: relative;
+            text-decoration: none;
+          }
+          a:before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 1px;
+            background: #555;
+            transform: scale(0, 1);
+            transform-origin: left;
+            transition: 0.5s;
+          }
+          a:hover {
+            color: #101010;
+          }
+          a:hover:before {
+            transform: scale(1);
+          }
+        }
+      }
+      .Bottom {
+        display: flex;
+        justify-content: center;
+        .Text {
+          font-size: 12px;
+          margin-top: 16px;
+          width: 32%;
+        }
+      }
+    }
+  }
+}
+
+}

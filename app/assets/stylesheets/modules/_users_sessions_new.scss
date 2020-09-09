@@ -39,3 +39,15 @@
     }
   }
 }
+@media screen and(max-width: 414px) {
+  .UsersSessionsNew {
+    .Wrapper {
+      .Main {
+        background: image-url("earth-illust.png");
+        background-repeat: no-repeat;
+        background-position: bottom 32px center;
+        background-size: 100px;
+      }
+    }
+  }
+}

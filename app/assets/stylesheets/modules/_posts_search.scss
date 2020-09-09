@@ -69,3 +69,77 @@
     }
   }
 }
+@media screen and(max-width: 414px) {
+  .PostsSearch {
+    .Wrapper {
+      .Main {
+        background: image-url("earth-illust.png");
+        background-repeat: no-repeat;
+        background-position: bottom 70px center;
+        background-size: 100px;
+        padding-bottom: 216px;
+        .Map {
+          height: 100%;
+          width: 100vw;
+        }
+        .Contents {
+          // height: 600px;
+          // overflow: scroll;
+          .HeadLine {
+            // padding: 0 4%;
+            padding-right: calc(4% + 8px);
+            padding-left: calc(4% + 8px);
+          }
+          .Grid {
+            display: grid;
+            gap: 24px;
+            grid-template-columns: 1fr;
+            margin-top: 2%;
+            padding: 0 4%;
+            margin-bottom: 50px;
+            
+          }
+          .Content {
+            font-size: 12px;
+            // transition: all .8s ease-in-out;
+            padding: 8px;
+            // animation-name: fadein;
+            // animation-duration: 1s;
+            .Description {
+              height: 90px;
+              overflow: scroll;
+            }
+            &__bottom {
+              height: 36px;
+              .Name {
+                font-size: 16px;
+                border-bottom: 1px solid #666;
+              }
+            }
+            .Like {
+              padding-bottom: 8px;
+            }
+          }
+          .FadeIn {
+            visibility: hidden;
+          }
+          // @keyframes fadein {
+          //   from {
+          //       opacity: 0;
+          //       transform: translateY(20px);
+          //   }
+          //   to {
+          //       opacity: 1;
+          //       transform: translateY(0);
+          //   }
+          // }
+          .Content:hover {
+            box-shadow: 0 0 25px rgba(0,0,0,.45);
+            background-color: antiquewhite;
+          }
+        }
+      }
+    }
+  }
+  
+}
