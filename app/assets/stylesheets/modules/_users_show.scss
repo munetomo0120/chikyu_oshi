@@ -27,3 +27,38 @@
     }
   }
 }
+@media screen and(max-width: 414px) {
+  .UsersShow {
+    .Wrapper {
+      .Main {
+        background: image-url("earth-illust.png");
+        background-repeat: no-repeat;
+        background-position: bottom 70px center;
+        background-size: 100px;
+        padding-bottom: 216px;
+        position: relative;
+        z-index: 1;
+        .Contents {
+          .HeadLine {
+            padding-right: calc(4% + 8px);
+            padding-left: calc(4% + 8px);
+          }
+          .Link {
+            margin-top: 24px;
+          }
+
+          .Grid {
+            display: grid;
+            gap: 24px;
+            grid-template-columns: 1fr;
+            margin-top: 2%;
+            padding: 0 4%;
+            margin-bottom: 50px;
+            
+          }
+        }
+      }
+    }
+  }
+  
+}
