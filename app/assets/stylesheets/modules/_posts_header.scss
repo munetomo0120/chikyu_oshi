@@ -137,7 +137,10 @@
         }
       }
       .menu {
-        text-align:center;
+        position: fixed;
+        // top:0;
+        left: 4%;
+        text-align: center;
         background-color:rgba(255,255,255,0.5);
         transition: 0.5s ease;/*滑らかに表示*/
         -webkit-transform: translateX(100%);/*画面より100%外へ押し出し非表示にさせる*/
@@ -148,12 +151,12 @@
           li {
             margin: 0;
             a {
-              display:block;
-              font-weight:bold;
+              display: block;
+              font-weight: bold;
               padding: 2em;
-              border-bottom: 1px dotted #CCC;
+              // border-bottom: 1px dotted #CCC;
               color:#333;
-              text-decoration:none;
+              text-decoration: none;
             }
             a:hover {
               background-color:rgba(0,0,0,0.5);
@@ -165,6 +168,9 @@
       .open {
         -webkit-transform: translateX(0%);
         transform: translateX(0%);/*メニューを元の位置へ戻す*/
+        a {
+          border-bottom: 1px dotted #CCC;
+        }
       }
     }
   }
