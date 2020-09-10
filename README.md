@@ -22,13 +22,16 @@ http://54.168.157.246/
 
 ### デモ画面
 トップ画面〜一覧画面（ログインしなくても見れます）  
-[![Image from Gyazo](https://i.gyazo.com/3cf8dc87fff8a7f78fb2c526482f282a.gif)](https://gyazo.com/3cf8dc87fff8a7f78fb2c526482f282a)
+<!-- [![Image from Gyazo](https://i.gyazo.com/3cf8dc87fff8a7f78fb2c526482f282a.gif)](https://gyazo.com/3cf8dc87fff8a7f78fb2c526482f282a) -->
+<a href="https://gyazo.com/3cf8dc87fff8a7f78fb2c526482f282a"><img src="https://i.gyazo.com/3cf8dc87fff8a7f78fb2c526482f282a.gif" alt="Image from Gyazo" width="400"/></a>
 
 一覧画面〜詳細画面（ログインしなくても見れます）  
-[![Image from Gyazo](https://i.gyazo.com/6130830d92afa3f811abe69f623a3c82.gif)](https://gyazo.com/6130830d92afa3f811abe69f623a3c82)
+<!-- [![Image from Gyazo](https://i.gyazo.com/6130830d92afa3f811abe69f623a3c82.gif)](https://gyazo.com/6130830d92afa3f811abe69f623a3c82) -->
+<a href="https://gyazo.com/6130830d92afa3f811abe69f623a3c82"><img src="https://i.gyazo.com/6130830d92afa3f811abe69f623a3c82.gif" alt="Image from Gyazo" width="400"/></a>
 
 スマートフォン画面のデモです  
-[![Image from Gyazo](https://i.gyazo.com/61d473b5fe1fd88945dd8a4772abcc31.gif)](https://gyazo.com/61d473b5fe1fd88945dd8a4772abcc31)
+<!-- [![Image from Gyazo](https://i.gyazo.com/61d473b5fe1fd88945dd8a4772abcc31.gif)](https://gyazo.com/61d473b5fe1fd88945dd8a4772abcc31) -->
+<a href="https://gyazo.com/61d473b5fe1fd88945dd8a4772abcc31"><img src="https://i.gyazo.com/61d473b5fe1fd88945dd8a4772abcc31.gif" alt="Image from Gyazo" width="230"/></a>
 
 
 # 使用技術（開発環境）
