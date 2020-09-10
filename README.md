@@ -21,13 +21,13 @@ http://54.168.157.246/
 終了時には必ずログアウトをお願いします。  
 
 ### デモ画面
-- トップ画面〜一覧画面（ログインしなくても見れます）  
+トップ画面〜一覧画面（ログインしなくても見れます）  
 [![Image from Gyazo](https://i.gyazo.com/3cf8dc87fff8a7f78fb2c526482f282a.gif)](https://gyazo.com/3cf8dc87fff8a7f78fb2c526482f282a)
 
-- 一覧画面〜詳細画面（ログインしなくても見れます）  
+一覧画面〜詳細画面（ログインしなくても見れます）  
 [![Image from Gyazo](https://i.gyazo.com/6130830d92afa3f811abe69f623a3c82.gif)](https://gyazo.com/6130830d92afa3f811abe69f623a3c82)
 
-- スマートフォン画面のデモです  
+スマートフォン画面のデモです  
 [![Image from Gyazo](https://i.gyazo.com/61d473b5fe1fd88945dd8a4772abcc31.gif)](https://gyazo.com/61d473b5fe1fd88945dd8a4772abcc31)
 
 
