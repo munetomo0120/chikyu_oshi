@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   # テスト時コメントアウト
-  before_action :move_to_index, except: [:index, :top, :search, :show]
+  before_action :move_to_index, except: [:index, :top, :search, :show, :about]
 
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   def top
@@ -8,6 +8,10 @@ class PostsController < ApplicationController
     if user_signed_in?
       redirect_to user_path(current_user.id)
     end
+  end
+  
+  def about
+
   end
 
   def index

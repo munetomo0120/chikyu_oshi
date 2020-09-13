@@ -12,6 +12,9 @@
     .menu
       %ul.MainNav
         %li
+          = link_to posts_about_path do
+            操作方法はこちら
+        %li
           = link_to posts_path do
             世界遺産・建造物一覧
         - if user_signed_in?
