@@ -9,11 +9,18 @@ Rails.application.routes.draw do
     post 'users/guest_sign_in', to: 'users/sessions#new_guest'
   end
 
+  # ルートパス
+  root 'posts#top'
+  # トップページへのパス
+  get 'posts/top', to: 'posts#top'
+  get 'posts/about', to: 'posts#about'
+
   # postsコントローラ
   resources :posts do
     collection do
       # searchアクションへのパス
       get 'search'
+      # get 'about'
     end
     member do
       post   '/like/:post_id' => 'likes#like',   as: 'like'
@@ -21,10 +28,8 @@ Rails.application.routes.draw do
     end
   
   end
-  # ルートパス
-  root 'posts#top'
-  # トップページへのパス
-  get 'posts/top', to: 'posts#top'
+
+  
   
   # usersコントローラ
   resources :users, only: [:index, :show] do
